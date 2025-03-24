@@ -1,0 +1,40 @@
+name: Deploy Vite App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Build do projeto
+        run: npm run build
+
+      - name: Verificar se a pasta dist foi criada
+        run: ls -la dist
+
+      - name: Deploy para o GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: github.com/MatheuSoneca/Matheus-Viana-Dantas
+        run: |
+          npx gh-pages -d dist -u "github-actions <github-actions@users.noreply.github.com>" -r "https://x-access-token:${GITHUB_TOKEN}@${REPO}"
