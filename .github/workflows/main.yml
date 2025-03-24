@@ -32,12 +32,11 @@ jobs:
       - name: Verificar se a pasta dist foi criada
         run: ls -la dist
 
-      - name: Configurar Git (identidade para gh-pages)
+      - name: Deploy para o GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: github.com/MatheuSoneca/Matheus-Viana-Dantas
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Deploy para o GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npx gh-pages -d dist -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" -r "https://x-access-token:${GITHUB_TOKEN}@${REPO}"
