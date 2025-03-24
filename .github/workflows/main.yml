@@ -37,4 +37,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: github.com/MatheuSoneca/Matheus-Viana-Dantas
         run: |
-          npx gh-pages -d dist -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" -r "https://x-access-token:${GITHUB_TOKEN}@${REPO}"
+          npx gh-pages -d dist -u "github-actions <github-actions@users.noreply.github.com>" -r "https://x-access-token:${GITHUB_TOKEN}@${REPO}"
