@@ -24,13 +24,18 @@ jobs:
           node-version: '20'
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install
 
       - name: Build do projeto
         run: npm run build
 
       - name: Verificar se a pasta dist foi criada
         run: ls -la dist
+
+      - name: Configurar Git (identidade para gh-pages)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy para o GitHub Pages
         run: npm run deploy
