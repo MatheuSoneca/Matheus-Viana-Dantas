@@ -1,4 +1,4 @@
-name: Deploy React App to GitHub Pages
+name: Deploy Vite App to GitHub Pages
 
 on:
   push:
@@ -24,10 +24,13 @@ jobs:
           node-version: '20'
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci
 
       - name: Build do projeto
         run: npm run build
+
+      - name: Verificar se a pasta dist foi criada
+        run: ls -la dist
 
       - name: Deploy para o GitHub Pages
         run: npm run deploy
