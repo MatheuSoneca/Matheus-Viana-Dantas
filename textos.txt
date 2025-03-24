@@ -1,0 +1,12 @@
+sobre m mim pt
+
+Olá! Meu nome é Matheus Viana Dantas, tenho 23 anos e moro em Montes Claros, MG, Brasil.
+
+Atualmente, estou cursando Desenvolvimento de Sistemas e tenho conhecimento em JavaScript, TypeScript e React. Também estudo Node.js e já explorei Python. Apesar de ainda não ter experiência profissional, venho aprimorando minhas habilidades por meio de projetos pessoais e estudos constantes.
+
+
+sobre mim english
+
+Hello! My name is Matheus Viana Dantas, I am 23 years old and I live in Montes Claros, MG, Brazil.
+
+I am currently studying Systems Development and have knowledge in JavaScript, TypeScript, and React. I am also learning Node.js and have explored Python. Although I do not have professional experience yet, I have been improving my skills through personal projects and continuous learning.
