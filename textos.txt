@@ -1,3 +1,11 @@
+mudar o icone da aba para algo do tipo, um M, icone do react ou algo do tipo
+
+adicionar os projetos, talvez fazer um carrosel?
+
+adicionar o botao para mudar linguagem
+adicionar função para o botao de tema
+
+
 sobre m mim pt
 
 Olá! Meu nome é Matheus Viana Dantas, tenho 23 anos e moro em Montes Claros, MG, Brasil.
